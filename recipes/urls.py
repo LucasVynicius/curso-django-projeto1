@@ -8,7 +8,8 @@ app_name = 'recipes'
 
 urlpatterns = [
     path('', views.home, name="home"),
-    path('recipes/<int:id>/', views.recipes, name="recipe"),
+    path('recipes/<int:id>/<int:category_id>/', views.category, name="category"),
+    path('recipe/<int:id>/', views.recipes, name="recipe" ), #manter compatibilidade
 ]
 
 urlpatterns += static(
